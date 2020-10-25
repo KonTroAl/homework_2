@@ -39,25 +39,23 @@ def calculator():
         a = float(input("Введите первое число: "))
         b = float(input("Введите второе число: "))
     except ValueError:
-        print("Вы вместо трехзначного числа ввели строку (((. Исправьтесь")
+        print("Вы вместо числа ввели строку (((. Исправьтесь")
         return calculator()
     if oper == "+":
         print(f"Ваш результат: {a + b}")
-        return calculator()
+
     elif oper == "-":
         print(f"Ваш результат: {a - b}")
-        return calculator()
+
     elif oper == "*":
         print(f"Ваш результат: {a * b}")
-        return calculator()
+
     elif oper == "/":
         try:
             print(f"Ваш результат: {a / b}")
         except ZeroDivisionError:
             print("Деление на ноль запрещено!")
-        return calculator()
-    else:
-        return calculator()
+    return calculator()
 
 print(calculator())
 
