@@ -42,17 +42,17 @@ def calculator():
         print("Вы вместо трехзначного числа ввели строку (((. Исправьтесь")
         return calculator()
     if oper == "+":
-        print(a + b)
+        print(f"Ваш результат: {a + b}")
         return calculator()
     elif oper == "-":
-        print(a - b)
+        print(f"Ваш результат: {a - b}")
         return calculator()
     elif oper == "*":
-        print(a * b)
+        print(f"Ваш результат: {a * b}")
         return calculator()
     elif oper == "/":
         try:
-            print(a / b)
+            print(f"Ваш результат: {a / b}")
         except ZeroDivisionError:
             print("Деление на ноль запрещено!")
         return calculator()
