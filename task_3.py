@@ -20,7 +20,7 @@
 def rever(a):
     if a < 10:
         return a
-    return str(a % 10) + str(rever(a // 10))
+    return int(str(a % 10) + str(rever(a // 10)))
 
 a = int(input("Введите число, которое требуется перевернуть: "))
 
