@@ -14,3 +14,15 @@
 
 Элемент в 2 раза меньше предыд и имеет противопол знак
 """
+
+def my_sum(a):
+    global res
+    if a == 0:
+        return res
+    a -= 1
+    res = 1 + (res/(-2))
+    return my_sum(a)
+
+res = 0
+a = int(input("Введите количество элементов: "))
+print(my_sum(a))
