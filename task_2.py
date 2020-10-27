@@ -17,3 +17,23 @@
 Введите число: 123
 Количество четных и нечетных цифр в числе равно: (1, 2)
 """
+
+def numbers(a):
+    global even
+    global odd
+    if a == 0:
+        return (f"Количество четных и нечетных цифр в числе равно: ({even}, {odd})")
+    b = a % 10
+    res = b % 2
+    if res == 0:
+        even += 1
+    else:
+        odd += 1
+    return numbers(a // 10)
+
+even = 0
+odd = 0
+
+a = float(input("Введите число: "))
+print(numbers(a))
+

@@ -20,4 +20,13 @@
 
 Допускается исп-е встроенных ф-ций
 """
+def ascii_table(n):
+    global i
+    if n == 127:
+        return f"{n} - {chr(n)}"
+    while i <= 10:
+        return f"{n} - {chr(n)} {ascii_table(n + 1)}"
+    i += 1
 
+i = 1
+print(ascii_table(32))
